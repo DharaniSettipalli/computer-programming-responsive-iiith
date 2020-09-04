@@ -251,7 +251,8 @@ body {
 .imageRectangle {
     left: 50%;
     top: 0%;
-    background-image: url('rectangle.jpg');
+    background-image: url('rat6.png');
+
     border: 1px dashed black;
 }
 
