@@ -70,6 +70,7 @@ window.view = {
 			alert( 'Size of the array must be an Integer !' )
 	},
 	generateRandomNumbers: function() {
+
 		var inputValue = this.getArraySize()
 		for ( i = 0 ; i < inputValue ; i++ ) {
 			var random = Math.floor(Math.random()*15)
@@ -83,8 +84,10 @@ window.view = {
 	},
 	takeInputFromRadioBox: function() {
 		var element = document.getElementsByName('radio_group')
-		if ( element[0].checked )
+		if ( element[0].checked ){
+			document.querySelector("#userInput").disabled=true
 			this.generateRandomNumbers()
+		}
 		else if (element[1].checked)
 			this.getUserInput()
 	},
