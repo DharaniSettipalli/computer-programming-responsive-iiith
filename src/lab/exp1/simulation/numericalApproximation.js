@@ -290,11 +290,15 @@ window.view = {
 			alert('Enter numeric value of a and b');
 			return false;
 		} 
-		else if (valueA2 >= valueB2 || valueB2 > 30) {
-			alert('Integration Limits are from 0 to 30, b > a and b-a >= 1');
+		else if(valueA2<1 || valueA2>10 || valueB2<1 || valueB2>10){
+			alert("Invalid input, a and b values should range from 1 to 10");
 			return false;
 		}
-		else {
+		else if (valueA2 >= valueB2 || valueB2 > 10) {
+			alert('Integration Limits are from 0 to 10, b > a and b-a >= 1');
+			return false;
+		}
+			else {
 			model.inputValueA = valueA2;
 			model.inputValueB = valueB2;
 		}
