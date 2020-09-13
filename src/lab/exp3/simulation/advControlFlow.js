@@ -166,7 +166,11 @@ window.view = {
     	this.getInput()
     	this.clearDivs()
     	var selected_loop = this.getSelectedLoop()
-		var inputValue = document.getElementById('simpleLoopInput').value
+		var inputValue = document.getElementById('simpleLoopInput').value;
+	    if(inputValue<0 || inputValue>20){
+			alert("invalid input, input Value should be between 0 to 20");
+			return false;
+		}
 		if (selected_loop === 'for' && inputValue !== '' && !isNaN(model.inp) )
 		{
 			this.displayLoop('forLoopContent', 'codeContentFor1')
